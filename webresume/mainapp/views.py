@@ -3,4 +3,11 @@ from .models import *
 
 
 def index(request):
-    return render(request, 'mainapp/index.html')
+    main_info = MainInfo.objects.filter(active_resume=True).last()
+    personal_qualities = PersonalQualities.objects.filter(main_info=main_info.id)
+    attainments = Attainments.objects.filter(main_info=main_info.id)
+    contacts = Contacts.objects.filter(main_info=main_info.id)
+    return render(request, 'mainapp/index.html', {'main_info': main_info,
+                                                  'personal_qualities': personal_qualities,
+                                                  'attainments': attainments,
+                                                  'contacts': contacts})

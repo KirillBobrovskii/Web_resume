@@ -36,6 +36,17 @@ class PersonalQualities(models.Model):
         verbose_name_plural = 'Качества'
 
 
+class Education(models.Model):
+    education = models.CharField(max_length=50)
+    institution = models.CharField(max_length=100)
+    profession = models.CharField(max_length=100)
+    finish_date = models.DateField()
+
+    class Meta:
+        verbose_name = 'Образование'
+        verbose_name_plural = 'Образование'
+
+
 class WorkExperience(models.Model):
     main_info = models.ForeignKey(MainInfo, on_delete=models.CASCADE)
     position = models.CharField(max_length=100)
