@@ -73,8 +73,20 @@
             {% for project in projects %}
                 <div class="substrate">
                     <h3>{{ project.name }}</h3>
-                    <img src="{{ project.image.url }}" width="200px">
+                    <img src="{{ project.image.url }}" width="250px">
                     <div><a href="">Подробнее</a></div>
+                </div>
+            {% endfor %}
+        </div>
+        <div id="work_experience">
+            <h2>Опыт работы</h2>
+            {% for work_experience in work_experience %}
+                <div class="substrate">
+                    <div><span>Профессия: </span>{{ work_experience.position }}</div>
+                    <div><span>Компания: </span>{{ work_experience.company }}</div>
+                    <div><span>Дата устройства: </span>{{ work_experience.set_up|date:"m.Y" }}</div>
+                    <div><span>Дата увольнения: </span>{{ work_experience.quit|date:"m.Y" }}</div>
+                    <div><span>Обязанности: </span>{{ work_experience.responsibility }}</div>
                 </div>
             {% endfor %}
         </div>
