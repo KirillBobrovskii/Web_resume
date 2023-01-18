@@ -22,9 +22,10 @@ h1 {
     padding: 10px;
 }
 
-#main_info {
+#main_info, #education, #projects {
     border: 5px solid #167f19;
     border-radius: 10px;
+    margin-bottom: 10px;
     padding: 0 10px 10px 10px;
 }
 
@@ -47,10 +48,10 @@ h2, h3 {
     border-radius: 10px;
     font-size: 20px;
     margin-bottom: 15px;
-    padding-left: 10px;
+    padding: 5px 10px 5px 10px;
 }
 
-.green_text {
+#main_info .row_1 .col_2 span, #education .substrate span {
     font-weight: bold;
     color: #167f19;
 }
@@ -87,4 +88,41 @@ h2, h3 {
 
 #main_info .row_2 .col_1, #main_info .row_2 .col_2 {
     border-right: 5px solid #167f19;
+}
+
+#education .substrate {
+    background-color: rgba(22, 127, 25, 0.2);
+    border-radius: 10px;
+    margin-bottom: 15px;
+    padding: 0px 10px 0px 10px;
+}
+
+#education .substrate div {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+#projects .substrate {
+    display: inline-block;
+    background-color: rgba(22, 127, 25, 0.2);
+    border-radius: 10px;
+    padding: 0px 10px 15px 10px;
+}
+
+#projects .substrate div {
+    text-align: right;
+    margin-top: 15px;
+}
+
+#projects .substrate div a {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #167f19;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+footer {
+    font-size: 12px;
+    text-align: center;
 }

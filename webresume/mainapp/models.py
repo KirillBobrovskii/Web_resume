@@ -23,8 +23,8 @@ class Attainments(models.Model):
     name = models.CharField(max_length=100)
 
     class Meta:
-        verbose_name = 'Навык'
-        verbose_name_plural = 'Навыки'
+        verbose_name = 'Знание'
+        verbose_name_plural = 'Знания'
 
 
 class PersonalQualities(models.Model):
@@ -37,8 +37,9 @@ class PersonalQualities(models.Model):
 
 
 class Education(models.Model):
-    education = models.CharField(max_length=50)
+    main_info = models.ForeignKey(MainInfo, on_delete=models.CASCADE)
     institution = models.CharField(max_length=100)
+    education = models.CharField(max_length=50)
     profession = models.CharField(max_length=100)
     finish_date = models.DateField()
 

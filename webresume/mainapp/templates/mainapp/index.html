@@ -16,16 +16,16 @@
                     <img src="{{ main_info.photo.url }}">
                 </div>
                 <div class="col_2">
-                    <div><span class="green_text">Профессия: </span>{{ main_info.profession }}</div>
-                    <div><span class="green_text">ФИО: </span>{{ main_info.fio }}</div>
-                    <div><span class="green_text">Дата рождения: </span>{{ main_info.birthday|date:"d.m.Y" }}</div>
-                    <div><span class="green_text">Гражданство: </span>{{ main_info.country }}</div>
-                    <div><span class="green_text">Город: </span>{{ main_info.city }}</div>
-                    <div><span class="green_text">Семейное положение: </span>
+                    <div><span>Профессия: </span>{{ main_info.profession }}</div>
+                    <div><span>ФИО: </span>{{ main_info.fio }}</div>
+                    <div><span>Дата рождения: </span>{{ main_info.birthday|date:"d.m.Y" }}</div>
+                    <div><span>Гражданство: </span>{{ main_info.country }}</div>
+                    <div><span>Город: </span>{{ main_info.city }}</div>
+                    <div><span>Семейное положение: </span>
                         {% if main_info.marital_status %}
-                            женат
+                            Женат
                         {% else %}
-                            не женат
+                            Не женат
                         {% endif %}
                     </div>
                     <div><span class="green_text">Занятость: </span>{{ main_info.busyness }}</div>
@@ -56,6 +56,27 @@
                     {% endfor %}
                 </div>
             </div>
+        </div>
+        <div id="education">
+            <h2>Образование</h2>
+            {% for education in education %}
+                <div class="substrate">
+                    <div><span>Учебное заведение: </span>{{ education.institution }}</div>
+                    <div><span>Образование: </span>{{ education.education }}</div>
+                    <div><span>Специальность: </span>{{ education.profession }}</div>
+                    <div><span>Год окончания: </span>{{ education.finish_date|date:"Y" }} год</div>
+                </div>
+            {% endfor %}
+        </div>
+        <div id="projects">
+            <h2>Проекты</h2>
+            {% for project in projects %}
+                <div class="substrate">
+                    <h3>{{ project.name }}</h3>
+                    <img src="{{ project.image.url }}" width="200px">
+                    <div><a href="">Подробнее</a></div>
+                </div>
+            {% endfor %}
         </div>
         <footer><a href="https://ru.freepik.com/free-photo/globe-technology-business-with-gradient-wallpaper_13312403.htm#page=2&query=%D1%84%D0%BE%D0%BD%20%D0%B4%D0%BB%D1%8F%20it%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0&position=20&from_view=search&track=ais">Изображение от rawpixel.com</a> на Freepik</footer>
     </div>
