@@ -5,90 +5,55 @@
     <meta charset="UTF-8">
     <title>Резюме</title>
     <link rel="stylesheet" href="{% static 'mainapp/css/index.css' %}">
+    <link rel="stylesheet" href="{% static 'mainapp/css/main_info.css' %}">
 </head>
 <body>
     <div id="layout">
-        <h1>Резюме</h1>
+        <div id="menu">
+            <h1>Резюме</h1>
+            <a href="">Основная информация</a>
+            <a href="">Образование</a>
+            <a href="">Проекты</a>
+            <a href="">Опыт работы</a>
+            <a href="">Обратная связь</a>
+        </div>
         <div id="main_info">
-            <h2>Основная информация</h2>
-            <div class="row_1">
-                <div class="col_1">
-                    <img src="{{ main_info.photo.url }}">
-                </div>
-                <div class="col_2">
-                    <div><span>Профессия: </span>{{ main_info.profession }}</div>
-                    <div><span>ФИО: </span>{{ main_info.fio }}</div>
-                    <div><span>Дата рождения: </span>{{ main_info.birthday|date:"d.m.Y" }}</div>
-                    <div><span>Гражданство: </span>{{ main_info.country }}</div>
-                    <div><span>Город: </span>{{ main_info.city }}</div>
-                    <div><span>Семейное положение: </span>
-                        {% if main_info.marital_status %}
-                            Женат
-                        {% else %}
-                            Не женат
-                        {% endif %}
-                    </div>
-                    <div><span class="green_text">Занятость: </span>{{ main_info.busyness }}</div>
-                    <div><span class="green_text">Иностранные языки: </span>{{ main_info.languages }}</div>
-                </div>
-            </div>
-            <div class="row_2">
-                <div class="col_1">
-                    <h3>Личные качества</h3>
-                    <ul>
-                        {% for personal_quality in personal_qualities %}
-                            <li><span>{{ personal_quality.name }}</span></li>
-                        {% endfor %}
-                    </ul>
-                </div>
-                <div class="col_2">
-                    <h3>Знания</h3>
-                    <ul>
-                        {% for attainment in attainments %}
-                            <li><span>{{ attainment.name }}</span></li>
-                        {% endfor %}
-                    </ul>
-                </div>
-                <div class="col_3">
-                    <h3>Контакты</h3>
-                    {% for contact in contacts %}
-                        <div><span>{{ contact.name }}: </span>{{ contact.value }}</div>
-                    {% endfor %}
-                </div>
-            </div>
+
         </div>
         <div id="education">
             <h2>Образование</h2>
             {% for education in education %}
                 <div class="substrate">
-                    <div><span>Учебное заведение: </span>{{ education.institution }}</div>
-                    <div><span>Образование: </span>{{ education.education }}</div>
-                    <div><span>Специальность: </span>{{ education.profession }}</div>
-                    <div><span>Год окончания: </span>{{ education.finish_date|date:"Y" }} год</div>
+                    <div><span><b>Учебное заведение: </b></span>{{ education.institution }}</div>
+                    <div><span><b>Образование: </b></span>{{ education.education }}</div>
+                    <div><span><b>Специальность: </b></span>{{ education.profession }}</div>
+                    <div><span><b>Год окончания: </b></span>{{ education.finish_date|date:"Y" }} год</div>
                 </div>
             {% endfor %}
         </div>
         <div id="projects">
-            <h2>Проекты</h2>
-            {% for project in projects %}
-                <div class="substrate">
-                    <h3>{{ project.name }}</h3>
-                    <img src="{{ project.image.url }}" width="250px">
-                    <div><a href="">Подробнее</a></div>
-                </div>
-            {% endfor %}
+
         </div>
         <div id="work_experience">
             <h2>Опыт работы</h2>
             {% for work_experience in work_experience %}
                 <div class="substrate">
-                    <div><span>Профессия: </span>{{ work_experience.position }}</div>
-                    <div><span>Компания: </span>{{ work_experience.company }}</div>
-                    <div><span>Дата устройства: </span>{{ work_experience.set_up|date:"m.Y" }}</div>
-                    <div><span>Дата увольнения: </span>{{ work_experience.quit|date:"m.Y" }}</div>
-                    <div><span>Обязанности: </span>{{ work_experience.responsibility }}</div>
+                    <div><span><b>Профессия: </b></span>{{ work_experience.position }}</div>
+                    <div><span><b>Компания: </b></span>{{ work_experience.company }}</div>
+                    <div><span><b>Дата устройства: </b></span>{{ work_experience.set_up|date:"m.Y" }}</div>
+                    <div><span><b>Дата увольнения: </b></span>{{ work_experience.quit|date:"m.Y" }}</div>
+                    <div><span><b>Обязанности: </b></span>{{ work_experience.responsibility }}</div>
                 </div>
             {% endfor %}
+        </div>
+        <div id="send_email">
+            <h2>Обратная связь</h2>
+            <form method="POST">
+                {% csrf_token %}
+                <div class="send_email_text">Заинтересовало резюме? Вы можете отправить ответное письмо автору.</div>
+                <div><textarea></textarea></div>
+                <div class="input"><input type="submit" value="Отправить"></div>
+            </form>
         </div>
         <footer><a href="https://ru.freepik.com/free-photo/globe-technology-business-with-gradient-wallpaper_13312403.htm#page=2&query=%D1%84%D0%BE%D0%BD%20%D0%B4%D0%BB%D1%8F%20it%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0&position=20&from_view=search&track=ais">Изображение от rawpixel.com</a> на Freepik</footer>
     </div>

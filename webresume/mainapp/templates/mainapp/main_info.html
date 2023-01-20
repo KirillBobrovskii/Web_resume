@@ -1,0 +1,46 @@
+<h2>Основная информация</h2>
+<div class="row_1">
+    <div class="col_1">
+        <img src="{{ main_info.photo.url }}">
+    </div>
+    <div class="col_2">
+        <div><span><b>Профессия: </b></span>{{ main_info.profession }}</div>
+        <div><span><b>ФИО: </b></span>{{ main_info.fio }}</div>
+        <div><span><b>Дата рождения: </b></span>{{ main_info.birthday|date:"d.m.Y" }}</div>
+        <div><span><b>Гражданство: </b></span>{{ main_info.country }}</div>
+        <div><span><b>Город: </b></span>{{ main_info.city }}</div>
+        <div><span><b>Семейное положение: </b></span>
+            {% if main_info.marital_status %}
+                Женат
+            {% else %}
+                Не женат
+            {% endif %}
+        </div>
+        <div><span><b>Занятость: </b></span>{{ main_info.busyness }}</div>
+        <div><span><b>Иностранные языки: </b></span>{{ main_info.languages }}</div>
+    </div>
+</div>
+<div class="row_2">
+    <div class="col_1">
+        <h3>Личные качества</h3>
+        <ul>
+            {% for personal_quality in personal_qualities %}
+                <li><span>{{ personal_quality.name }}</span></li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="col_2">
+        <h3>Знания</h3>
+        <ul>
+            {% for attainment in attainments %}
+                <li><span>{{ attainment.name }}</span></li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="col_3">
+        <h3>Контакты</h3>
+        {% for contact in contacts %}
+            <div><span><b>{{ contact.name }}: </b></span>{{ contact.value }}</div>
+        {% endfor %}
+    </div>
+</div>

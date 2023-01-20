@@ -1,0 +1,8 @@
+<h2>Проекты</h2>
+{% for project in projects %}
+    <div class="substrate">
+        <h3>{{ project.name }}</h3>
+        <img src="{{ project.image.url }}" width="250px">
+        <div><a href="">Подробнее</a></div>
+    </div>
+{% endfor %}
