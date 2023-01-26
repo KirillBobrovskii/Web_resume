@@ -15,123 +15,75 @@ body {
     margin: 0 auto 0 auto;
 }
 
-#menu {
-    position: sticky;
-    top: 8px;
-    background-color: #167f19;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    padding: 10px 10px 0 10px;
-}
-
-h1, #menu a {
-    display: inline-block;
-    color: #ffffff;
-}
-
 h1 {
-    margin: 0 20px 10px 0;
-}
-
-#menu a {
-    position: relative;
-    bottom: 4px;
-    text-decoration: none;
-    border: 3px solid #ffffff;
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 10px;
     border-radius: 10px;
-    margin: 0 0 10px 20px;
-    padding: 5px;
+    color: #ffffff;
+    background-color: #167f19;
 }
-
 
 #main_info,
 #education,
-#projects,
 #work_experience,
 #send_email {
+    margin-bottom: 10px;
+    padding: 10px;
     border: 5px solid #167f19;
     border-radius: 10px;
-    margin-bottom: 10px;
-    padding: 0 10px 10px 10px;
 }
 
-h2, h3,
-#main_info .row_1 span,
-#main_info .row_2 span,
-#education span,
-#work_experience span {
+h2, h3 {
     color: #167f19;
-}
-
-#education .substrate div,
-#work_experience .substrate div {
-    font-size: 20px;
-    margin-bottom: 10px;
 }
 
 #education .substrate,
 #work_experience .substrate {
-    background-color: rgba(22, 127, 25, 0.2);
-    border-radius: 10px;
-    padding: 0px 10px 0 10px;
-}
-
-/*
-#projects .substrate {
-    display: inline-block;
-    width: 250px;
-    background-color: rgba(22, 127, 25, 0.2);
-    border-radius: 10px;
-    padding: 0px 10px 15px 10px;
-}
-
-#projects .substrate div {
-    text-align: right;
-    margin-top: 15px;
-}
-
-#projects .substrate div a {
-    text-decoration: none;
-    color: #ffffff;
-    background-color: #167f19;
-    border-radius: 5px;
-    padding: 5px;
-}
-*/
-
-#send_email .send_email_text {
-    font-size: 18px;
     margin-bottom: 10px;
+    padding: 10px 10px 1px 10px;
+    border-radius: 10px;
+    background-color: rgba(22, 127, 25, 0.2);
+}
+
+#education .substrate div,
+#work_experience .substrate div,
+#send_email #send_email_text {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#education .substrate span,
+#work_experience .substrate span {
+    color: #167f19;
 }
 
 #send_email textarea {
-    box-sizing: border-box;
     resize: none;
+    box-sizing: border-box;
     width: 100%;
-    height: 150px;
+    height: 200px;
+    margin-bottom: 10px;
+    outline: none;
     border: 3px solid #167f19;
     border-radius: 10px;
-    margin-bottom: 10px;
 }
 
-#send_email textarea:focus {
-    outline: none;
-}
-
-#send_email .input {
+#send_email #input {
     text-align: right;
 }
 
 #send_email input {
-    background-color: #167f19;
-    color: #ffffff;
-    font-size: 18px;
-    border: 3px solid #167f19;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px;
+    border: none;
     border-radius: 10px;
-    padding: 5px;
+    color: #ffffff;
+    background-color: #167f19;
 }
 
 footer {
-    text-align: center;
     font-size: 12px;
+    text-align: center;
 }

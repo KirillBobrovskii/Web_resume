@@ -1,9 +1,7 @@
 <h2>Основная информация</h2>
-<div class="row_1">
-    <div class="col_1">
-        <img src="{{ main_info.photo.url }}">
-    </div>
-    <div class="col_2">
+<div id="main_info_container_1" class="container">
+    <img class="item_1" src="{{ main_info.photo.url }}">
+    <div class="item_2">
         <div><span><b>Профессия: </b></span>{{ main_info.profession }}</div>
         <div><span><b>ФИО: </b></span>{{ main_info.fio }}</div>
         <div><span><b>Дата рождения: </b></span>{{ main_info.birthday|date:"d.m.Y" }}</div>
@@ -20,8 +18,8 @@
         <div><span><b>Иностранные языки: </b></span>{{ main_info.languages }}</div>
     </div>
 </div>
-<div class="row_2">
-    <div class="col_1">
+<div id="main_info_container_2" class="container">
+    <div class="item_1">
         <h3>Личные качества</h3>
         <ul>
             {% for personal_quality in personal_qualities %}
@@ -29,7 +27,7 @@
             {% endfor %}
         </ul>
     </div>
-    <div class="col_2">
+    <div class="item_2">
         <h3>Знания</h3>
         <ul>
             {% for attainment in attainments %}
@@ -37,7 +35,7 @@
             {% endfor %}
         </ul>
     </div>
-    <div class="col_3">
+    <div class="item_3">
         <h3>Контакты</h3>
         {% for contact in contacts %}
             <div><span><b>{{ contact.name }}: </b></span>{{ contact.value }}</div>

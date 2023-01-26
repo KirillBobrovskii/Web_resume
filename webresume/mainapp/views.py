@@ -8,7 +8,7 @@ def index(request):
     attainments = Attainments.objects.filter(main_info=main_info.id)
     contacts = Contacts.objects.filter(main_info=main_info.id)
     education = Education.objects.filter(main_info=main_info.id)
-    projects = Projects.objects.filter(main_info=main_info.id)
+    projects = Projects.objects.filter(main_info=main_info.id, id=2)
     work_experience = WorkExperience.objects.filter(main_info=main_info.id)
     return render(request, 'mainapp/index.html', {'main_info': main_info,
                                                   'personal_qualities': personal_qualities,

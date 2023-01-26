@@ -1,52 +1,68 @@
-#main_info .row_1 {
-    display: grid;
-    grid-template-columns: 250px 1fr;
+#main_info .container {
+    display: flex;
+    flex-direction: row;
 }
 
-#main_info img {
+#main_info_container_1 .item_1 {
+    flex: 1;
+    width: 256px;
+    height: 256px;
+    margin: 0 auto 10px auto;
     border: 5px solid #167f19;
     border-radius: 100%;
 }
 
-#main_info .row_1 .col_2 div {
-    background-color: rgba(22, 127, 25, 0.2);
+#main_info_container_1 .item_2 {
+    flex: 3;
+    padding-left: 20px;
+}
+
+#main_info_container_1 .item_2 div {
+    font-size: 20px;
+    margin-bottom: 10px;
+    padding: 5px;
     border-radius: 10px;
-    font-size: 20px;
-    margin-bottom: 10px;
-    padding: 10px;
+    background-color: rgba(22, 127, 25, 0.2);
 }
 
-#main_info .row_2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-}
-
-#main_info .row_2 li,
-#main_info .row_2 li {
+#main_info_container_1 .item_2 span,
+#main_info_container_2 .item_1 li,
+#main_info_container_2 .item_2 li,
+#main_info_container_2 .item_3 span {
     color: #167f19;
-    font-size: 20px;
-    margin-bottom: 8px;
 }
 
-#main_info .row_2 .col_1 span,
-#main_info .row_2 .col_2 span,
-#main_info .row_2 .col_3 div {
-    color: #000000;
+#main_info_container_2 .item_1 span,
+#main_info_container_2 .item_2 span,
+#main_info_container_2 .item_3 div {
     font-size: 18px;
+    color: #000000;
 }
 
-#main_info .row_2 .col_3 div {
-    margin-bottom: 10px;
-}
-
-#main_info .row_2 .col_1,
-#main_info .row_2 .col_2 {
+#main_info_container_2 .item_1,
+#main_info_container_2 .item_2 {
+    padding: 0 10px 0 10px;
     border-right: 5px solid #167f19;
 }
 
-#main_info .row_2 .col_1,
-#main_info .row_2 .col_2,
-#main_info .row_2 .col_3 {
-    padding-left: 10px;
+#main_info_container_2 .item_3 {
+    padding: 0 10px 0 10px;
+}
+
+@media screen and (max-width: 1020px) {
+    #main_info .container {
+        flex-direction: column;
+    }
+
+    #main_info_container_1 .item_2 {
+        padding-left: 0;
+    }
+
+    #main_info_container_2 .item_1,
+    #main_info_container_2 .item_2 {
+        padding: 0 10px 0 10px;
+        border-right: none;
+        border-bottom: 5px solid #167f19;
+    }
 }
 
