@@ -18,20 +18,21 @@ body {
 h1 {
     text-align: center;
     margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 10px;
-    color: #ffffff;
     background-color: #167f19;
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 10px;
 }
 
 #main_info,
 #education,
+#projects,
 #work_experience,
 #send_email {
     margin-bottom: 10px;
-    padding: 10px;
     border: 5px solid #167f19;
     border-radius: 10px;
+    padding: 10px;
 }
 
 h2, h3 {
@@ -41,9 +42,9 @@ h2, h3 {
 #education .substrate,
 #work_experience .substrate {
     margin-bottom: 10px;
-    padding: 10px 10px 1px 10px;
-    border-radius: 10px;
     background-color: rgba(22, 127, 25, 0.2);
+    border-radius: 10px;
+    padding: 10px 10px 1px 10px;
 }
 
 #education .substrate div,
@@ -53,9 +54,48 @@ h2, h3 {
     margin-bottom: 10px;
 }
 
-#education .substrate span,
-#work_experience .substrate span {
+#education span,
+#work_experience span {
     color: #167f19;
+}
+
+#projects .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#projects .substrate {
+    width: 65%;
+    background-color: rgba(22, 127, 25, 0.2);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#left,
+#right {
+    cursor: pointer;
+    font-size: 50px;
+    color: #167f19;
+}
+
+#projects img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#projects .substrate div {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#projects .substrate a {
+    text-decoration: none;
+    background-color: #167f19;
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 5px;
 }
 
 #send_email textarea {
@@ -63,24 +103,24 @@ h2, h3 {
     box-sizing: border-box;
     width: 100%;
     height: 200px;
-    margin-bottom: 10px;
     outline: none;
+    margin-bottom: 10px;
     border: 3px solid #167f19;
     border-radius: 10px;
 }
 
-#send_email #input {
+#input {
     text-align: right;
 }
 
 #send_email input {
     cursor: pointer;
     font-size: 16px;
-    padding: 10px;
+    background-color: #167f19;
+    color: #ffffff;
     border: none;
     border-radius: 10px;
-    color: #ffffff;
-    background-color: #167f19;
+    padding: 10px;
 }
 
 footer {

@@ -6,6 +6,8 @@
     <title>Резюме</title>
     <link rel="stylesheet" href="{% static 'mainapp/css/index.css' %}">
     <link rel="stylesheet" href="{% static 'mainapp/css/main_info.css' %}">
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <script src="{% static 'mainapp/js/index.js' %}"></script>
 </head>
 <body>
     <div id="layout">
@@ -25,7 +27,18 @@
             {% endfor %}
         </div>
         <div id="projects">
-            {% include 'mainapp/projects.html' %}
+            <h2>Проекты</h2>
+            <div class="container">
+                <div id="left">⮜</div>
+                {% for project in projects %}
+                    <div class="substrate">
+                        <h3>{{ project.name }}</h3>
+                        <img src="{{ project.image.url }}">
+                        <div><a href="">Подробнее</a></div>
+                    </div>
+                {% endfor %}
+                <div id="right">⮞</div>
+            </div>
         </div>
         <div id="work_experience">
             <h2>Опыт работы</h2>

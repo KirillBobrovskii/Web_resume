@@ -20,12 +20,12 @@
 #main_info_container_1 .item_2 div {
     font-size: 20px;
     margin-bottom: 10px;
-    padding: 5px;
-    border-radius: 10px;
     background-color: rgba(22, 127, 25, 0.2);
+    border-radius: 10px;
+    padding: 5px;
 }
 
-#main_info_container_1 .item_2 span,
+#main_info_container_1 span,
 #main_info_container_2 .item_1 li,
 #main_info_container_2 .item_2 li,
 #main_info_container_2 .item_3 span {
@@ -41,8 +41,8 @@
 
 #main_info_container_2 .item_1,
 #main_info_container_2 .item_2 {
-    padding: 0 10px 0 10px;
     border-right: 5px solid #167f19;
+    padding: 0 10px 0 10px;
 }
 
 #main_info_container_2 .item_3 {
@@ -60,9 +60,9 @@
 
     #main_info_container_2 .item_1,
     #main_info_container_2 .item_2 {
-        padding: 0 10px 0 10px;
         border-right: none;
         border-bottom: 5px solid #167f19;
+        padding: 0 10px 0 10px;
     }
 }
 
