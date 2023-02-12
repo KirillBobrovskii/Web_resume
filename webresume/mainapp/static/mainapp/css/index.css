@@ -89,11 +89,15 @@ h2, h3 {
     text-align: center;
 }
 
-#projects .substrate a {
-    text-decoration: none;
-    padding: 5px;
+#projects .substrate button,
+input,
+#back button {
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px;
     background-color: #0c7d52;
     color: #ffffff;
+    border: none;
     border-radius: 10px;
 }
 
@@ -114,17 +118,6 @@ textarea {
 
 form div {
     text-align: right;
-}
-
-input,
-#back button {
-    cursor: pointer;
-    font-size: 16px;
-    padding: 10px;
-    background-color: #0c7d52;
-    color: #ffffff;
-    border: none;
-    border-radius: 10px;
 }
 
 #back {

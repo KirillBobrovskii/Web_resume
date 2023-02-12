@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from django.http import HttpResponse
+from django.core.mail import send_mail
 from .models import *
 from .forms import *
 
@@ -24,16 +26,15 @@ def index(request):
 
 
 def send_email(request):
-    #email_form = EmailForm(request.POST)
-    #if email_form.is_valid():
-        # message = request.POST.get('message')
-        # send_mail(
-        #     'Резюме',
-        #     message,
-        #     'kirillbobrowsky_resume@mail.ru',
-        #     ['kirillbobrowsky_resume@mail.ru'],
-        #     fail_silently=False,
-        # )
-    #else:
-        #return HttpResponse('Invalid data')
-    return render(request, 'mainapp/send_email.html')
+    if EmailForm(request.POST).is_valid():
+        message = request.POST.get('message')
+        send_mail(
+            'Резюме',
+            message,
+            'kirillbobrowsky_resume@mail.ru',
+            ['kirillbobrowsky_resume@mail.ru'],
+            fail_silently=False,
+        )
+        return render(request, 'mainapp/send_email.html')
+    else:
+        return HttpResponse('Invalid data')

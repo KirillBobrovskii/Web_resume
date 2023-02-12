@@ -25,7 +25,7 @@
                     <div class="substrate">
                         <h3>{{ project.project }}</h3>
                         <div><img src="{{ project.image.url }}"></div>
-                        <div><a href="#">Подробнее</a></div>
+                        <div><a href="#"><button>Подробнее</button></a></div>
                     </div>
                 {% endfor %}
                 <div id="right">⮞</div>
@@ -47,6 +47,7 @@
             <h2>Обратная связь</h2>
             <form method="POST" action="{% url 'send_email' %}">
                 {% csrf_token %}
+                <div>{{ email_form.label_tag }}</div>
                 {{ email_form }}
                 <div><input type="submit" value="Отправить"></div>
             </form>
