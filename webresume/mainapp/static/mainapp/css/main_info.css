@@ -8,7 +8,7 @@
     width: 256px;
     height: 256px;
     margin: 0 auto 10px auto;
-    border: 5px solid #167f19;
+    border: 5px solid #0c7d52;
     border-radius: 100%;
 }
 
@@ -20,49 +20,66 @@
 #main_info_container_1 .item_2 div {
     font-size: 20px;
     margin-bottom: 10px;
-    background-color: rgba(22, 127, 25, 0.2);
-    border-radius: 10px;
     padding: 5px;
+    background-color: rgba(12, 125, 82, 0.2);
+    border-radius: 10px;
 }
 
-#main_info_container_1 span,
+#main_info_container_1 span {
+    color: #0c7d52;
+}
+
+#main_info_container_2 .item_1,
+#main_info_container_2 .item_2,
+#main_info_container_3 .item_1,
+#main_info_container_3 .item_2 {
+    flex: 1;
+}
+
+#main_info_container_2 .item_1 div,
+#main_info_container_2 .item_2 div,
+#main_info_container_3 .item_1 div,
+#main_info_container_3 .item_2 div:first-child,
 #main_info_container_2 .item_1 li,
 #main_info_container_2 .item_2 li,
-#main_info_container_2 .item_3 span {
-    color: #167f19;
+#main_info_container_3 .item_1 li {
+    font-size: 20px;
+    color: #0c7d52;
+}
+
+#main_info_container_2 .item_1 li,
+#main_info_container_2 .item_2 li,
+#main_info_container_3 .item_1 li {
+    margin-bottom: 10px;
 }
 
 #main_info_container_2 .item_1 span,
 #main_info_container_2 .item_2 span,
-#main_info_container_2 .item_3 div {
-    font-size: 18px;
+#main_info_container_3 .item_1 span {
     color: #000000;
 }
 
-#main_info_container_2 .item_1,
-#main_info_container_2 .item_2 {
-    border-right: 5px solid #167f19;
-    padding: 0 10px 0 10px;
+#main_info_container_3 .item_2 div:first-child {
+    margin-bottom: 16px;
 }
 
-#main_info_container_2 .item_3 {
-    padding: 0 10px 0 10px;
+#main_info_container_3 .item_2 div:not(:first-child) {
+    font-size: 20px;
+    margin-bottom: 10px;
+    padding-left: 25px;
 }
 
-@media screen and (max-width: 1020px) {
+#main_info_container_3 .item_2 span {
+    color: #0c7d52;
+}
+
+@media screen and (max-width: 1024px) {
     #main_info .container {
         flex-direction: column;
     }
 
     #main_info_container_1 .item_2 {
         padding-left: 0;
-    }
-
-    #main_info_container_2 .item_1,
-    #main_info_container_2 .item_2 {
-        border-right: none;
-        border-bottom: 5px solid #167f19;
-        padding: 0 10px 0 10px;
     }
 }
 

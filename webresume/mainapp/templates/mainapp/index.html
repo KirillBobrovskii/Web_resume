@@ -11,57 +11,9 @@
 </head>
 <body>
     <div id="layout">
-        <h1>Резюме</h1>
-        <div id="main_info">
-            {% include 'mainapp/main_info.html' %}
-        </div>
-        <div id="education">
-            <h2>Образование</h2>
-            {% for education in education %}
-                <div class="substrate">
-                    <div><span><b>Учебное заведение: </b></span>{{ education.institution }}</div>
-                    <div><span><b>Образование: </b></span>{{ education.education }}</div>
-                    <div><span><b>Специальность: </b></span>{{ education.profession }}</div>
-                    <div><span><b>Год окончания: </b></span>{{ education.finish_date|date:"Y" }} год</div>
-                </div>
-            {% endfor %}
-        </div>
-        <div id="projects">
-            <h2>Проекты</h2>
-            <div class="container">
-                <div id="left">⮜</div>
-                {% for project in projects %}
-                    <div class="substrate">
-                        <h3>{{ project.name }}</h3>
-                        <img src="{{ project.image.url }}">
-                        <div><a href="">Подробнее</a></div>
-                    </div>
-                {% endfor %}
-                <div id="right">⮞</div>
-            </div>
-        </div>
-        <div id="work_experience">
-            <h2>Опыт работы</h2>
-            {% for work_experience in work_experience %}
-                <div class="substrate">
-                    <div><span><b>Профессия: </b></span>{{ work_experience.position }}</div>
-                    <div><span><b>Компания: </b></span>{{ work_experience.company }}</div>
-                    <div><span><b>Дата устройства: </b></span>{{ work_experience.set_up|date:"m.Y" }}</div>
-                    <div><span><b>Дата увольнения: </b></span>{{ work_experience.quit|date:"m.Y" }}</div>
-                    <div><span><b>Обязанности: </b></span>{{ work_experience.responsibility }}</div>
-                </div>
-            {% endfor %}
-        </div>
-        <div id="send_email">
-            <h2>Обратная связь</h2>
-            <form method="POST">
-                {% csrf_token %}
-                <div id="send_email_text">Заинтересовало резюме? Вы можете отправить письмо автору.</div>
-                <div><textarea></textarea></div>
-                <div id="input"><input type="submit" value="Отправить"></div>
-            </form>
-        </div>
-        <footer><a href="https://ru.freepik.com/free-photo/globe-technology-business-with-gradient-wallpaper_13312403.htm#page=2&query=%D1%84%D0%BE%D0%BD%20%D0%B4%D0%BB%D1%8F%20it%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0&position=20&from_view=search&track=ais">Изображение от rawpixel.com</a> на Freepik</footer>
+        {% block content %}
+        {% endblock %}
+        <footer><a href="https://ru.freepik.com/free-photo/globe-technology-business-with-gradient-wallpaper_13312403.htm#query=%D1%84%D0%BE%D0%BD%20%D0%B4%D0%BB%D1%8F%20it%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0&position=9&from_view=search&track=ais">Изображение от rawpixel.com</a> на Freepik</footer>
     </div>
 </body>
 </html>

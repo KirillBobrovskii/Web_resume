@@ -15,30 +15,39 @@
             {% endif %}
         </div>
         <div><span><b>Занятость: </b></span>{{ main_info.busyness }}</div>
-        <div><span><b>Иностранные языки: </b></span>{{ main_info.languages }}</div>
     </div>
 </div>
 <div id="main_info_container_2" class="container">
     <div class="item_1">
-        <h3>Личные качества</h3>
+        <div><b>Знания</b></div>
         <ul>
-            {% for personal_quality in personal_qualities %}
-                <li><span>{{ personal_quality.name }}</span></li>
+            {% for knowledge in knowledge %}
+                <li><span>{{ knowledge.knowledge }}</span></li>
             {% endfor %}
         </ul>
     </div>
     <div class="item_2">
-        <h3>Знания</h3>
+        <div><b>Иностранные языки</b></div>
         <ul>
-            {% for attainment in attainments %}
-                <li><span>{{ attainment.name }}</span></li>
+            {% for language in languages %}
+                <li><span>{{ language.language }}</span></li>
             {% endfor %}
         </ul>
     </div>
-    <div class="item_3">
-        <h3>Контакты</h3>
+</div>
+<div id="main_info_container_3" class="container">
+    <div class="item_1">
+        <div><b>Личные качества</b></div>
+        <ul>
+            {% for quality in qualities %}
+                <li><span>{{ quality.quality }}</span></li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="item_2">
+        <div><b>Контакты</b></div>
         {% for contact in contacts %}
-            <div><span><b>{{ contact.name }}: </b></span>{{ contact.value }}</div>
+            <div><span><b>{{ contact.contact }}: </b></span>{{ contact.value }}</div>
         {% endfor %}
     </div>
 </div>
