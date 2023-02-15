@@ -25,7 +25,7 @@
                     <div class="substrate">
                         <h3>{{ project.project }}</h3>
                         <div><img src="{{ project.image.url }}"></div>
-                        <div><a href="#"><button>Подробнее</button></a></div>
+                        <div><a href="{{ project.get_absolute_url }}"><button>Подробнее</button></a></div>
                     </div>
                 {% endfor %}
                 <div id="right">⮞</div>

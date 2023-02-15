@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 
 class Professions(models.Model):
@@ -133,10 +134,14 @@ class WorkExperience(models.Model):
 
 class Projects(models.Model):
     main_info = models.ForeignKey(MainInfo, on_delete=models.PROTECT, verbose_name='Резюме')
+    slug = models.SlugField(max_length=100, unique=True, db_index=True, verbose_name='Ссылка')
     project = models.CharField(max_length=100, verbose_name='Проект')
     image = models.ImageField(upload_to='images/mainapp', verbose_name='Фото')
     description = models.TextField(verbose_name='Описание')
-    link = models.URLField(verbose_name='Ссылка')
+    link = models.URLField(verbose_name='Cсылка на GitHub')
+
+    def get_absolute_url(self):
+        return reverse('project', kwargs={'slug_name': self.slug})
 
     def __str__(self):
         return self.project
