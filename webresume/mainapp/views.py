@@ -17,7 +17,7 @@ def index(request):
             'qualities': PersonalQualities.objects.filter(main_info=main_info.pk),
             'contacts': Contacts.objects.filter(main_info=main_info.pk),
             'education': Education.objects.filter(main_info=main_info.pk),
-            'projects': Projects.objects.filter(pk=1, main_info=main_info.pk),
+            'projects': Projects.objects.filter(pk=2, main_info=main_info.pk),
             'projects_count': Projects.objects.filter(main_info=main_info.pk).count(),
             'work_experience': WorkExperience.objects.filter(main_info=main_info.pk),
             'email_form': email_form

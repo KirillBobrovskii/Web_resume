@@ -40,21 +40,19 @@
 #main_info_container_2 .item_2 div,
 #main_info_container_3 .item_1 div,
 #main_info_container_3 .item_2 div:first-child,
-#main_info_container_2 .item_1 li,
-#main_info_container_2 .item_2 li,
-#main_info_container_3 .item_1 li {
+#main_info_container_2 li,
+#main_info_container_3 li,
+#main_info_container_3 .item_2 span {
     font-size: 20px;
     color: #0c7d52;
 }
 
-#main_info_container_2 .item_1 li,
-#main_info_container_2 .item_2 li,
-#main_info_container_3 .item_1 li {
+#main_info_container_2 li,
+#main_info_container_3 li {
     margin-bottom: 10px;
 }
 
-#main_info_container_2 .item_1 span,
-#main_info_container_2 .item_2 span,
+#main_info_container_2 span,
 #main_info_container_3 .item_1 span {
     color: #000000;
 }
@@ -67,10 +65,6 @@
     font-size: 20px;
     margin-bottom: 10px;
     padding-left: 25px;
-}
-
-#main_info_container_3 .item_2 span {
-    color: #0c7d52;
 }
 
 @media screen and (max-width: 1024px) {

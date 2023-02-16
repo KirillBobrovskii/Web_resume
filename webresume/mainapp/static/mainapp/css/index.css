@@ -90,9 +90,8 @@ h2, h3 {
     text-align: center;
 }
 
-#projects .substrate button,
-input,
-#back button {
+button,
+input {
     cursor: pointer;
     font-size: 16px;
     padding: 10px;
