@@ -4,13 +4,9 @@
     <h1>Резюме</h1>
     <div id="project">
         <h2>{{ project.project }}</h2>
-        <div id="project_container_1" class="container">
-            <img class="item_1" src="{{ project.image.url }}">
-            <div class="item_2">
-                <div>{{ project.description }}</div>
-                <div>Ссылка на репозиторий GitHub: <a href="{{ project.link }}">{{ project.link }}</a></div>
-                <div><button onclick="history.back()">Вернуться</button></div>
-            </div>
-        </div>
+        <img src="{{ project.image.url }}">
+        <div>{{ project.description }}</div>
+        <div>Ссылка на репозиторий GitHub: <a href="{{ project.link }}">{{ project.link }}</a></div>
+        <div><button onclick="history.back()">Вернуться</button></div>
     </div>
 {% endblock %}

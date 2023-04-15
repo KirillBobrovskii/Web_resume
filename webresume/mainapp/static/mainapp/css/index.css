@@ -2,6 +2,10 @@
     font-family: "Arial";
 }
 
+html, body {
+    margin: 0px;
+}
+
 body {
     background-image: url("../images/background.jpg");
     background-repeat: no-repeat;
@@ -17,10 +21,9 @@ body {
 
 h1 {
     text-align: center;
-    margin-bottom: 10px;
-    padding: 10px;
-    background-color: #0c7d52;
     color: #ffffff;
+    background-color: #0c7d52;
+    padding: 10px;
     border-radius: 10px;
 }
 
@@ -90,6 +93,22 @@ h2, h3 {
     text-align: center;
 }
 
+#project img {
+    display: block;
+    width: 80%;
+    margin: 0 auto 10px auto;
+}
+
+#project div {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#project a {
+    word-wrap: break-word;
+    color: #0c7d52;
+}
+
 button,
 input {
     cursor: pointer;
@@ -118,10 +137,6 @@ textarea {
 
 form div {
     text-align: right;
-}
-
-#back {
-    text-align: center;
 }
 
 footer {
