@@ -1,9 +1,6 @@
 * {
     font-family: "Arial";
-}
-
-html, body {
-    margin: 0px;
+    font-size: 20px;
 }
 
 body {
@@ -14,6 +11,17 @@ body {
     background-attachment: fixed;
 }
 
+.animate {
+  position: relative;
+  animation-name: animate;
+  animation-duration: 2s
+}
+
+@keyframes animate {
+  from { opacity:0 }
+  to { opacity:1 }
+}
+
 #layout {
     width: 70%;
     margin: 0 auto 0 auto;
@@ -21,28 +29,28 @@ body {
 
 h1 {
     text-align: center;
+    font-size: 32px;
     color: #ffffff;
     background-color: #0c7d52;
     padding: 10px;
     border-radius: 10px;
 }
 
-#main_info,
-#education,
-#projects,
-#project,
-#work_experience,
-#send_email,
-#back {
+.block {
     margin-bottom: 10px;
     padding: 10px;
     border: 5px solid #0c7d52;
     border-radius: 10px;
 }
 
-h2, h3 {
+h2, h3,
+footer a {
     color: #0c7d52;
 }
+
+h2 { font-size: 24px }
+
+h3 { font-size: 19px }
 
 #education .substrate,
 #work_experience .substrate {
@@ -53,8 +61,8 @@ h2, h3 {
 }
 
 #education .substrate div,
-#work_experience .substrate div {
-    font-size: 20px;
+#work_experience .substrate div,
+#project div {
     margin-bottom: 10px;
 }
 
@@ -85,23 +93,16 @@ h2, h3 {
 }
 
 #projects img {
-    width: 50%;
+    width: 80%;
     margin-bottom: 10px;
 }
 
-#projects .substrate div {
-    text-align: center;
-}
+#projects .substrate div { text-align: center }
 
 #project img {
     display: block;
     width: 80%;
     margin: 0 auto 10px auto;
-}
-
-#project div {
-    font-size: 20px;
-    margin-bottom: 10px;
 }
 
 #project a {
@@ -120,10 +121,6 @@ input {
     border-radius: 10px;
 }
 
-label {
-    font-size: 20px;
-}
-
 textarea {
     resize: none;
     box-sizing: border-box;
@@ -135,15 +132,25 @@ textarea {
     outline: none;
 }
 
-form div {
-    text-align: right;
-}
+form div { text-align: right }
 
-footer {
-    font-size: 12px;
-    text-align: center;
-}
-
+footer,
 footer a {
-    color: #0c7d52;
+    font-size: 12px;
+}
+
+footer { text-align: center }
+
+@media screen and (max-width: 768px) {
+    * { font-size: 16px }
+
+    h1 { font-size: 28px }
+
+    h2 { font-size: 20px }
+
+    h3 { font-size: 15px }
+}
+
+@media screen and (max-width: 480px) {
+    #layout { width: 100% }
 }

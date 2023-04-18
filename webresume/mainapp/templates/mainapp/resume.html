@@ -3,10 +3,10 @@
 {% block content %}
     {% if main_info %}
         <h1>Резюме</h1>
-        <div id="main_info">
+        <div id="main_info" class="block">
             {% include 'mainapp/main_info.html' %}
         </div>
-        <div id="education">
+        <div id="education" class="block">
             <h2>Образование</h2>
             {% for education in education %}
                 <div class="substrate">
@@ -17,7 +17,7 @@
                 </div>
             {% endfor %}
         </div>
-        <div id="projects">
+        <div id="projects" class="block">
             <h2>Проекты</h2>
             <div class="container">
                 <div id="left">⮜</div>
@@ -34,7 +34,7 @@
             </script>
             <script src="{% static 'mainapp/js/projects_slider.js' %}"></script>
         </div>
-        <div id="work_experience">
+        <div id="work_experience" class="block">
             <h2>Опыт работы</h2>
             {% for work_experience in work_experience %}
                 <div class="substrate">
@@ -46,11 +46,11 @@
                 </div>
             {% endfor %}
         </div>
-        <div id="send_email">
+        <div id="send_email" class="block">
             <h2>Обратная связь</h2>
             <form id="send_email_form">
                 {% csrf_token %}
-                <div>{{ email_form.label_tag }}</div>
+                {{ email_form.label_tag }}
                 {{ email_form }}
                 <div><input type="submit" value="Отправить"></div>
             </form>

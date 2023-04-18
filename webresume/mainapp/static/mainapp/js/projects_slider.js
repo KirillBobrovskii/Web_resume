@@ -26,9 +26,12 @@ $(function() {
                 index: index
             },
             success: function (project) {
-                $('#projects h3').text(project.project),
-                $('#projects img').attr('src', project.image),
-                $('#projects a').attr('href', project.slug)
+                $('#projects .substrate').animate({opacity: 0}, function () {
+                    $('#projects h3').text(project.project);
+                    $('#projects img').attr('src', project.image);
+                    $('#projects a').attr('href', project.slug);
+                });
+                $('#projects .substrate').animate({opacity: 1});
             },
             error: function (project) {
                 console.log(project.responseJSON.errors);

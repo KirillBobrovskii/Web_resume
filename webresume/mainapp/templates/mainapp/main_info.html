@@ -1,53 +1,55 @@
 <h2>Основная информация</h2>
 <div id="main_info_container_1" class="container">
-    <img class="item_1" src="{{ main_info.photo.url }}">
+    <div class="item_1">
+        <img src="{{ main_info.photo.url }}">
+    </div>
     <div class="item_2">
-        <div><span><b>Профессия: </b></span>{{ main_info.profession }}</div>
-        <div><span><b>ФИО: </b></span>{{ main_info.fio }}</div>
-        <div><span><b>Дата рождения: </b></span>{{ main_info.birthday|date:"d.m.Y" }}</div>
-        <div><span><b>Гражданство: </b></span>{{ main_info.country }}</div>
-        <div><span><b>Город: </b></span>{{ main_info.city }}</div>
-        <div><span><b>Семейное положение: </b></span>
+        <div><span class="green"><b>Профессия: </b></span>{{ main_info.profession }}</div>
+        <div><span class="green"><b>ФИО: </b></span>{{ main_info.fio }}</div>
+        <div><span class="green"><b>Дата рождения: </b></span>{{ main_info.birthday|date:"d.m.Y" }}</div>
+        <div><span class="green"><b>Гражданство: </b></span>{{ main_info.country }}</div>
+        <div><span class="green"><b>Город: </b></span>{{ main_info.city }}</div>
+        <div><span class="green"><b>Семейное положение: </b></span>
             {% if main_info.marital_status %}
                 Женат
             {% else %}
                 Не женат
             {% endif %}
         </div>
-        <div><span><b>Занятость: </b></span>{{ main_info.busyness }}</div>
+        <div><span class="green"><b>Занятость: </b></span>{{ main_info.busyness }}</div>
     </div>
 </div>
 <div id="main_info_container_2" class="container">
-    <div class="item_1">
-        <div><b>Знания</b></div>
+    <div class="flex">
+        <div class="green"><b>Знания</b></div>
         <ul>
             {% for knowledge in knowledge %}
-                <li><span>{{ knowledge.knowledge }}</span></li>
+                <li class="green"><span class="black">{{ knowledge.knowledge }}</span></li>
             {% endfor %}
         </ul>
     </div>
-    <div class="item_2">
-        <div><b>Иностранные языки</b></div>
+    <div class="flex">
+        <div class="green"><b>Иностранные языки</b></div>
         <ul>
             {% for language in languages %}
-                <li><span>{{ language.language }}</span></li>
+                <li class="green"><span class="black">{{ language.language }}</span></li>
             {% endfor %}
         </ul>
     </div>
 </div>
 <div id="main_info_container_3" class="container">
-    <div class="item_1">
-        <div><b>Личные качества</b></div>
+    <div class="flex">
+        <div class="green"><b>Личные качества</b></div>
         <ul>
             {% for quality in qualities %}
-                <li><span>{{ quality.quality }}</span></li>
+                <li class="green"><span class="black">{{ quality.quality }}</span></li>
             {% endfor %}
         </ul>
     </div>
-    <div class="item_2">
-        <div><b>Контакты</b></div>
+    <div class="ul flex">
+        <div class="green"><b>Контакты</b></div>
         {% for contact in contacts %}
-            <div><span><b>{{ contact.contact }}: </b></span>{{ contact.value }}</div>
+            <div><span class="green"><b>{{ contact.contact }}: </b></span>{{ contact.value }}</div>
         {% endfor %}
     </div>
 </div>

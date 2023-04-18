@@ -1,4 +1,3 @@
-from django.db.models import QuerySet
 from django.shortcuts import render
 from django.http import JsonResponse
 from django.core.mail import send_mail
