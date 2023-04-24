@@ -5,8 +5,8 @@
     <div id="project" class="block">
         <h2>{{ project.project }}</h2>
         <img src="{{ project.image.url }}">
-        <div>{{ project.description }}</div>
-        <div>Ссылка на репозиторий GitHub: <a href="{{ project.link }}">{{ project.link }}</a></div>
-        <div><button onclick="history.back()">Вернуться</button></div>
+        <div class="substrate">{{ project.description }}</div>
+        <div class="substrate">Ссылка на репозиторий GitHub: <a href="{{ project.link }}">{{ project.link }}</a></div>
+        <button onclick="history.back()">Вернуться</button>
     </div>
 {% endblock %}

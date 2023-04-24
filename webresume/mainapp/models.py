@@ -121,7 +121,7 @@ class WorkExperience(models.Model):
     position = models.CharField(max_length=100, verbose_name='Должность')
     company = models.CharField(max_length=50, verbose_name='Компания')
     set_up = models.DateField(verbose_name='Дата устроиства')
-    quit = models.DateField(verbose_name='Дата увольнения')
+    quit = models.DateField(blank=True, null=True, verbose_name='Дата увольнения')
     responsibility = models.TextField(verbose_name='Обязанности')
 
     def __str__(self):
