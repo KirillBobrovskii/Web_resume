@@ -28,7 +28,7 @@ $(function() {
             success: function (project) {
                 $('#projects .substrate').animate({opacity: 0}, function () {
                     $('#projects h3').text(project.project);
-                    $('#projects img').attr('src', project.image);
+                    $('#projects .substrate img').attr('src', project.image);
                     $('#projects a').attr('href', project.slug);
                 });
                 $('#projects .substrate').animate({opacity: 1});

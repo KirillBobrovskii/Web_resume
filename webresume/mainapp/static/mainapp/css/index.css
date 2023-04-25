@@ -88,11 +88,10 @@ h3 { font-size: 19px }
 #left,
 #right {
     cursor: pointer;
-    font-size: 50px;
-    color: #0c7d52;
+    width: 35px;
 }
 
-#projects img {
+#projects .substrate img {
     width: 80%;
     margin-bottom: 10px;
 }

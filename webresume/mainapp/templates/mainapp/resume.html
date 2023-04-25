@@ -20,13 +20,13 @@
         <div id="projects" class="block">
             <h2>Проекты</h2>
             <div class="container">
-                <div id="left">⮜</div>
+                <img id="left" src="{% static 'mainapp/images/left.png' %}">
                 <div class="substrate">
                     <h3>{{ projects.project }}</h3>
                     <div><img src="{{ projects.image.url }}"></div>
                     <div><a href="{{ projects.get_absolute_url }}"><button>Подробнее</button></a></div>
                 </div>
-                <div id="right">⮞</div>
+                <img id="right" src="{% static 'mainapp/images/right.png' %}">
             </div>
             <script>
                 var count_projects = {{ count_projects }}
